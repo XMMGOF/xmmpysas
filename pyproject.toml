@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "xmmpysas"
-version = "2.0.0"
+version = "2.1.0"
 description = "Python wrapper for XMM-Newton SAS."
 authors = ["Ryan Tanner <ryan.tanner@nasa.gov>"]
 readme = "pysas/README.md"
@@ -20,7 +20,6 @@ astropy = "^6.1"
 numpy = "^2.1"
 matplotlib = "^3.9"
 requests = "^2.32"
-pyds9 = "^1.8"
 pyqt5 = "^5.15"
 beautifultable = "^1.1"
 scipy = "^1.14"
