@@ -2342,20 +2342,6 @@ files = [
 ]
 
 [[package]]
-name = "pyds9"
-version = "1.8.1"
-description = "Python/DS9 connection via XPA (with numpy and pyfits support)"
-optional = false
-python-versions = "*"
-groups = ["main"]
-files = [
-    {file = "pyds9-1.8.1.tar.gz", hash = "sha256:b4f198f5d29b749f721c491f8384f6293e43ec417bd0492be36bffb5c3904b2a"},
-]
-
-[package.dependencies]
-six = "*"
-
-[[package]]
 name = "pyerfa"
 version = "2.0.1.5"
 description = "Python bindings for ERFA"
@@ -3476,4 +3462,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "a85c168943a1c04a6739aea061ca6734963e6a55b6864167278baaa6c3e4213e"
+content-hash = "c4a20b75a25123302828da522a65a36998e7dc49132ca41721ca2106948ada32"
