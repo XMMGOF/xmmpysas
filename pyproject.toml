@@ -1,10 +1,10 @@
 [project]
 name = "xmmpysas"
-version = "2.1.0"
+version = "2.1.2"
 description = "Python wrapper for XMM-Newton SAS."
 authors = [{name = "Ryan Tanner", email = "ryan.tanner@nasa.gov"}]
 readme = "pysas/README.md"
-packages = [{ include = "pysas" }]
+
 homepage = "https://www.cosmos.esa.int/web/xmm-newton/sas"
 repository = "https://github.com/XMMGOF/pysas"
 license = "GPL-3.0-or-later"
@@ -29,6 +29,9 @@ dependencies = [
     "loguru (>=0.7.3,<1.0.0)",
     "regions (>=0.10,<1.0.0)"
 ]
+
+[tool.poetry]
+packages = [{ include = "pysas" }]
 
 [build-system]
 requires = ["poetry-core"]
