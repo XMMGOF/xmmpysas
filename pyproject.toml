@@ -27,3 +27,4 @@ dependencies = [
 
 [tool.uv.build-backend]
 module-name = "pysas"
+source-exclude = ["pysas_docs"]
