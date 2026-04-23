@@ -3,7 +3,7 @@ name = "xmmpysas"
 version = "2.4.0"
 description = "Python wrapper for XMM-Newton SAS."
 authors = [{name = "Ryan Tanner", email = "ryan.tanner@nasa.gov"}]
-readme = "pysas/README.md"
+readme = "src/pysas/README.md"
 
 homepage = "https://www.cosmos.esa.int/web/xmm-newton/sas"
 repository = "https://github.com/XMMGOF/pysas"
@@ -26,9 +26,21 @@ dependencies = [
     "regions (>=0.10,<1.0.0)"
 ]
 
-[tool.poetry]
-packages = [{ include = "pysas" }]
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.11.7,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "pysas"
+
+[tool.uv.workspace]
+members = [
+    "xmmpysas",
+]
+
+# [tool.poetry]
+# packages = [{ include = "pysas" }]
+
+# [build-system]
+# requires = ["poetry-core"]
+# build-backend = "poetry.core.masonry.api"
