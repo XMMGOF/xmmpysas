@@ -1,11 +1,9 @@
 [project]
 name = "xmmpysas"
-version = "2.4.1"
+version = "2.4.2"
 description = "Python wrapper for XMM-Newton SAS."
 authors = [{name = "Ryan Tanner", email = "ryan.tanner@nasa.gov"}]
 readme = "src/pysas/README.md"
-homepage = "https://www.cosmos.esa.int/web/xmm-newton/sas"
-repository = "https://github.com/XMMGOF/pysas"
 license = "GPL-3.0-or-later"
 keywords = ["XMM-Newton", "x-ray", "astronomy"]
 classifiers = [
@@ -27,4 +25,3 @@ dependencies = [
 
 [tool.uv.build-backend]
 module-name = "pysas"
-source-exclude = ["pysas_docs"]
