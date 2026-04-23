@@ -4,3 +4,6 @@
 [submodule "pysas_docs"]
 	path = pysas_docs
 	url = https://github.com/rjtanner/pysas_docs
+[submodule "src/pysas"]
+	path = src/pysas
+	url = https://github.com/XMMGOF/pysas
