@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: xmmpysas
-Version: 2.4.2
+Version: 2.4.3
 Summary: Python wrapper for XMM-Newton SAS.
 Author-email: Ryan Tanner <ryan.tanner@nasa.gov>
 License-Expression: GPL-3.0-or-later

@@ -1,6 +1,6 @@
 [project]
 name = "xmmpysas"
-version = "2.4.2"
+version = "2.4.3"
 description = "Python wrapper for XMM-Newton SAS."
 authors = [{name = "Ryan Tanner", email = "ryan.tanner@nasa.gov"}]
 readme = "src/pysas/README.md"
