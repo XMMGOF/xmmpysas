@@ -25,3 +25,15 @@ dependencies = [
 
 [tool.uv.build-backend]
 module-name = "pysas"
+
+[tool.uv]
+# Include all Python files in the package
+include = [
+    "src/pysas/*.py",
+    "src/pysas/**/*.py",
+    "src/pysas/README.md",
+    "src/pysas/LICENSE",
+    "src/pysas/pysaspkgs",
+    "src/pysas/ChangeLog",
+    "src/pysas/_data/*"
+]

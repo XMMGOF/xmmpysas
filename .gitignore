@@ -1,1 +1,6 @@
 dist
+.venv
+.ipynb_checkpoints
+/docs/build
+*__pycache__
+/src/xga.egg-info/
