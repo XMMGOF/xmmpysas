@@ -9,11 +9,11 @@ src/pysas/parser.py
 src/pysas/print_version.py
 src/pysas/sastask.py
 src/pysas/sasutils.py
-src/pysas/setup_pysas.py
 src/pysas/version.py
 src/pysas/wrapper.py
 src/pysas/_attic/configutils.py
 src/pysas/_attic/error.py
+src/pysas/_attic/setup_pysas.py
 src/pysas/_attic/XMMextractor_tools/XMMextractor_tools.py
 src/pysas/_attic/XMMextractor_tools/XMMextractor_verify.py
 src/pysas/_attic/XMMextractor_tools/__init__.py

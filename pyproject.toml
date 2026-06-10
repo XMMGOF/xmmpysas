@@ -1,6 +1,6 @@
 [project]
 name = "xmmpysas"
-version = "2.4.3"
+version = "2.4.4"
 description = "Python wrapper for XMM-Newton SAS."
 authors = [{name = "Ryan Tanner", email = "ryan.tanner@nasa.gov"}]
 readme = "src/pysas/README.md"
@@ -23,17 +23,14 @@ dependencies = [
     "scipy>=1.14",
 ]
 
+[build-system]
+requires = ["uv_build>=0.11.19,<0.12"]
+build-backend = "uv_build"
+
 [tool.uv.build-backend]
 module-name = "pysas"
 
-[tool.uv]
-# Include all Python files in the package
-include = [
-    "src/pysas/*.py",
-    "src/pysas/**/*.py",
-    "src/pysas/README.md",
-    "src/pysas/LICENSE",
-    "src/pysas/pysaspkgs",
-    "src/pysas/ChangeLog",
-    "src/pysas/_data/*"
-]
+[tool.uv_build]
+src-layout = true
+package-data = {"my_package" = ["src/pysas/pysaspkgs", 
+                                "src/pysas/_data/*"]}
