@@ -1,21 +1,16 @@
-pysas package
-=============
-
-Subpackages
------------
+pySAS Classes and Functions
+===========================
 
 .. toctree::
    :maxdepth: 4
 
-   pysas.obsid
-   pysas.odfcontrol
-   pysas.pkgmaker
-   pysas.pysasplot_utils
-   pysas.pyutils
-   pysas.startsas
+ObsID
+-----
 
-Submodules
-----------
+.. automodule:: pysas.obsid
+   :members:
+   :show-inheritance:
+   :undoc-members:
 
 pysas.config\_pysas module
 --------------------------

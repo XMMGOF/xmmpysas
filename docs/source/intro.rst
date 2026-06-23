@@ -97,3 +97,7 @@ data directory by running the following:
 
     from pysas import sas_cfg
     sas_cfg.simple_config()
+
+Document last updated: |date|
+
+.. |date| date:: %Y-%m-%d

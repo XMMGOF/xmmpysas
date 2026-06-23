@@ -16,17 +16,23 @@ sys.path.insert(0, os.path.abspath('../../src/pysas/'))
 project = 'pySAS'
 copyright = '2026, Ryan Tanner'
 author = 'Ryan Tanner'
-release = '2.4.3'
+release = '2.4.4'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.napoleon',
-              'sphinx.ext.viewcode']
+              'sphinx.ext.viewcode',
+              'sphinx_rtd_theme',
+              'myst_parser']
 
 templates_path = ['_templates']
 exclude_patterns = []
+
+source_suffix = {'.rst': 'restructuredtext',
+                 '.md': 'markdown',
+                }
 
 # This should turn off including typehints in the function signatures in autodoc. That information is already in 
 #  the docstring and can look extremely confusing
@@ -40,3 +46,4 @@ autodoc_member_order = 'bysource'
 
 html_theme = 'sphinx_rtd_theme' # 'alabaster'
 html_static_path = ['_static']
+

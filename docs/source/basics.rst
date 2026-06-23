@@ -741,3 +741,7 @@ either 'single' or "double" quotes. For example:
 .. code-block::
 
     rgsproc withsrc=no orders='1 2 3'
+
+Document last updated: |date|
+
+.. |date| date:: %Y-%m-%d
