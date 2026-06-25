@@ -144,7 +144,7 @@ There are multiple ways to download XMM data, your advisor or mentor can show
 you their preferred method. pySAS has automated methods for downloading data 
 for a single **ObsID**. You can write a script (or get one from someone else) 
 to download multiple ObsIDs if needed. More information can be found on the page 
-:doc:`basics`.
+:doc:`overview`.
 
 You can search for specific observation targets, regions, or sources on the 
 main XMM Science Archive (XSA) in Europe or from the HEASARC at NASA Goddard 

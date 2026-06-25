@@ -1,7 +1,7 @@
-The Basics of pySAS
-===================
+Overview of pySAS
+=================
 
-This page provides a brief overview of how to use pySAS.
+This page provides an overview of how to use pySAS.
 
 To learn how to use SAS to do X-ray analysis with pySAS there are 
 `Jupyter Notebooks available on GitHub <https://github.com/XMMGOF/pysas_docs>`_ 
@@ -83,27 +83,27 @@ For more information on configuring pySAS see the section on
 The ObsID Object
 ----------------
 
-ObsID is a new pySAS class that makes it easier for the user to interface with 
-pySAS. It contains useful functions along with links to important directories 
-and files.
+:py:class:`~pysas.obsid.ObsID` is a new pySAS class that makes it easier for the 
+user to interface with pySAS. It contains useful functions along with links to 
+important directories and files.
 
 To work with a particular observation the user provides an Obs ID to the 
-ObsID object, as follows:
+:py:class:`~pysas.obsid.ObsID` object, as follows:
 
 .. code-block:: python
 
     obsid = '##########'
     my_obs = pysas.ObsID(obsid)
 
-``my_obs`` is an 'instance' of the object 'ObsID'. The ObsID class contains 
-several useful functions, information, and paths for the observation data you 
-are working with.
+``my_obs`` is an 'instance' of the object ':py:class:`~pysas.obsid.ObsID`'. The 
+:py:class:`~pysas.obsid.ObsID` class contains several useful functions, 
+information, and paths for the observation data you are working with.
 
-Important information and paths are stored as variables in the ObsID class. 
-These include:
+Important information and paths are stored as variables in the 
+:py:class:`~pysas.obsid.ObsID` class. These include:
 
 obsid
-    The Obs ID number used to create the ObsID object.
+    The Obs ID number used to create the :py:class:`~pysas.obsid.ObsID` object.
 
 data_dir
     Path to base data directory where all XMM data files will be downloaded. 
@@ -155,8 +155,8 @@ The 'files' dictionary will have the following keys:
 Downloading and Calibrating Observation Data Files
 --------------------------------------------------
 
-After creating an instance of an ObsID object you can download the corresponding 
-observation data using a few different functions.
+After creating an instance of an :py:class:`~pysas.obsid.ObsID` object you can 
+download the corresponding observation data using a few different functions.
 
 download_ODF_data()
     Can be used to download the ODF files for a single Obs ID.
@@ -167,10 +167,11 @@ download_PPS_data()
 download_ALL_data()
     Can be used to download both the ODF and PPS files for a single Obs ID.
 
-Alternatively you can use the function ``basic_setup``. This function will:
+Alternatively you can use the function :py:class:`~pysas.obsid.ObsID.basic_setup`. 
+This function will:
 
-1. Download data by calling ``download_ODF_data``
-2. Call the function ``calibrate_odf``
+1. Download data by calling :py:class:`~pysas.obsid.ObsID.download_ODF_data`
+2. Call the function :py:class:`~pysas.obsid.ObsID.calibrate_odf`
 
     A. Run ``cifbuild``
     B. Run ``odfingest``
@@ -180,18 +181,18 @@ Alternatively you can use the function ``basic_setup``. This function will:
 5. Run ``rgsproc``
 
 If the ODF files have previously been downloaded and are in the default data 
-directory, then upon creating the ObsID object (i.e. "my_obs = pysas.ObsID(obsid)") 
-pySAS will automatically find and link all important summary and calibration 
-files, and also all previously generated event lists made by epproc, emproc, 
-and rgsproc.
+directory, then upon creating the :py:class:`~pysas.obsid.ObsID` object 
+(i.e. "my_obs = pysas.ObsID(obsid)") pySAS will automatically find and link all 
+important summary and calibration files, and also all previously generated event 
+lists made by ``epproc``, ``emproc``, and ``rgsproc``.
 
 If your data is still proprietary pySAS can still download it, but depending on 
 whether you are getting your data from the XSA (ESA) or the HEASARC (NASA) the 
 information you need to provide will be different.
 
 To download proprietary data from the XSA at ESA using any of the download 
-functions or ``basic_setup`` you need to set the input ``proprietary`` to 
-``True``, as shown below.
+functions or :py:class:`~pysas.obsid.ObsID.basic_setup` you need to set the 
+input ``proprietary`` to ``True``, as shown below.
 
 .. code-block:: python
 
@@ -220,15 +221,16 @@ basic_setup and pySAS will handle the rest.
 Calling SAS Tasks
 -----------------
 
-All standard SAS tasks are called using the MyTask object in pySAS.
+All standard SAS tasks are called using the :py:class:`~pysas.sastask.MyTask` 
+object in pySAS.
 
 .. code-block:: python
 
     from pysas import MyTask
 
-``MyTask`` takes two inputs, the first is the name of the SAS task as a string. 
-The second is a dictionary with the input arguments for the SAS task. If there 
-are no input arguments then the dictionary will be empty:
+:py:class:`~pysas.sastask.MyTask` takes two inputs, the first is the name of the 
+SAS task as a string. The second is a dictionary with the input arguments for 
+the SAS task. If there are no input arguments then the dictionary will be empty:
 
 .. code-block:: python
 
@@ -283,6 +285,7 @@ with each parameter value a single string.
 For example,
 
 .. code-block:: python
+    
     inargs = {'table'            : 'event_list.fits', 
               'withfilteredset'  : 'yes', 
               'expression'       : "'(PATTERN <= 12)&&(PI in [200:4000])&&#XMMEA_EM'", 
@@ -435,7 +438,7 @@ output from running SAS), a default data directory, and a default repository
 from which to download data.
 
 The default data directory can be set or changed later using the function 
-``set_setting_and_save``. For example,
+:py:class:`~pysas.config_pysas.sas_config.set_setting_and_save`. For example,
 
 .. code-block:: python
 
@@ -571,8 +574,8 @@ file structure for the Obs ID you are working with may look like this:
 Output Logging
 --------------
 
-The ObsID class accepts inputs to control output logging. The inputs to 
-ObsID are:
+The :py:class:`~pysas.obsid.ObsID` class accepts inputs to control output 
+logging. The inputs to :py:class:`~pysas.obsid.ObsID` are:
 
 .. code-block::
 
@@ -594,9 +597,9 @@ logfilename
     If defined, then all output will be written to this file (but only if 
     ``output_to_file=True``). If no file name is given then the name of the log 
     file will be ``ObsID_+the Obs ID`` you are working with. Any SAS tasks run 
-    using ``basic_setup`` (i.e. ``cifbuild``, ``odfingest``, ``emproc``, 
-    ``epproc``, and ``rgsproc``) will have their output written to their own 
-    file in the ``work_dir``.
+    using :py:class:`~pysas.obsid.ObsID.basic_setup` (i.e. ``cifbuild``, 
+    ``odfingest``, ``emproc``, ``epproc``, and ``rgsproc``) will have their 
+    output written to their own file in the ``work_dir``.
 
 tasklogdir
     The directory where output log files will be written. If not defined then 
@@ -609,8 +612,9 @@ output_to_terminal
 output_to_file
     If True then output will be written to a log file, if False then not.
 
-If you are running an individual task, for example ``evselect``, the ``MyTask`` 
-object also accepts the same logging inputs as the ``ObsID`` class.
+If you are running an individual task, for example ``evselect``, the 
+:py:class:`~pysas.sastask.MyTask` object also accepts the same logging inputs as 
+the :py:class:`~pysas.obsid.ObsID` class.
 
 .. code-block::
 

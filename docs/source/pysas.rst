@@ -12,82 +12,66 @@ ObsID
    :show-inheritance:
    :undoc-members:
 
-pysas.config\_pysas module
---------------------------
+Configure pySAS
+---------------
 
 .. automodule:: pysas.config_pysas
    :members:
    :show-inheritance:
    :undoc-members:
 
-pysas.init\_sas module
-----------------------
-
-.. automodule:: pysas.init_sas
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
-pysas.logger module
--------------------
-
-.. automodule:: pysas.logger
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
-pysas.param module
-------------------
-
-.. automodule:: pysas.param
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
-pysas.parser module
--------------------
-
-.. automodule:: pysas.parser
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
-pysas.print\_version module
----------------------------
-
-.. automodule:: pysas.print_version
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
-pysas.sastask module
---------------------
+MyTask Class
+------------
 
 .. automodule:: pysas.sastask
    :members:
    :show-inheritance:
    :undoc-members:
 
-pysas.sasutils module
----------------------
+Initalize SAS Functions
+-----------------------
+
+.. automodule:: pysas.init_sas
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+pySAS Logging
+-------------
+
+.. automodule:: pysas.logger
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Read Parameter Files
+--------------------
+
+.. automodule:: pysas.param
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Parse Inputs
+------------
+
+.. automodule:: pysas.parser
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+SAS Utilities
+-------------
 
 .. automodule:: pysas.sasutils
    :members:
    :show-inheritance:
    :undoc-members:
 
-pysas.version module
---------------------
+pySAS and SAS Version
+---------------------
 
 .. automodule:: pysas.version
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
-Module contents
----------------
-
-.. automodule:: pysas
    :members:
    :show-inheritance:
    :undoc-members:
