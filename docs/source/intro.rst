@@ -1,3 +1,5 @@
+.. _topintro:
+
 Introduction to pySAS
 =====================
 
@@ -11,15 +13,37 @@ either Python scripts or a Jupyter Notebook.
 
 .. _Science Analysis System: https://www.cosmos.esa.int/web/xmm-newton/what-is-sas
 
------------------------
-How do I install pySAS?
------------------------
+pySAS can be used on your own computer or can be used on an online data 
+analysis platform.
 
-Before you can use pySAS you first have to install SAS following the  
+There are **free to use** online data analysis platforms to analize astronomy 
+data. These platforms are accessed through a browser and use a Jupyter Lab 
+environment as an interface. Currently there are three online platforms 
+available where you can use pySAS.
+
+* **Fornax**: A collaboration between NASA Goddard Space Flight Center and NASA’s 
+  science archives; HEASARC, IRSA, and MAST. (`Link to get an account on Fornax <https://docs.fornax.sciencecloud.nasa.gov/quick-start/>`_)
+* **SciServer**: Operated by the *Institute for Data-Intensive Engineering and 
+  Science* at Johns Hopkins University. (`Link to SciServer <https://www.sciserver.org/>`_)
+* **Datalabs**: Operated by the European Space Agency (ESA). (`Link to Datalabs <https://datalabs.esa.int/>`_)
+
+Both SAS and pySAS come preinstalled on 
+`Fornax <https://docs.fornax.sciencecloud.nasa.gov/quick-start/>`_, 
+`SciServer <https://www.sciserver.org/>`_, and `Datalabs <https://datalabs.esa.int/>`_.
+
+:ref:`Return to top <topintro>`
+
+------------------------------------------
+How do I install pySAS on my own computer?
+------------------------------------------
+
+You can install pySAS on your local machine to do data analysis. Before you can 
+use pySAS you first have to install SAS following the  
 `installation instructions <https://www.cosmos.esa.int/web/xmm-newton/download-and-install-sas>`_.
 
 **Note**: pySAS contains a function to download and update XMM-Newton 
-calibration files. You can have pySAS download the calibration files for you. 
+calibration files. When you configure pySAS you have the option to download the 
+calibration files. :ref:`See below for instructions <configure>`.
 
 Then pySAS can be installed using *pip*.
 
@@ -37,11 +61,20 @@ update pySAS to the latest version using:
 
     pip install xmmpysas --upgrade
 
--------------------------
-How do I configure pySAS?
--------------------------
+:ref:`Return to top <topintro>`
 
-Before you use pySAS for the first time you will need to configure pySAS so 
+.. _configure:
+
+---------------------------------------------
+How do I configure pySAS on my local machine?
+---------------------------------------------
+
+**Note**: Configuring pySAS on Fornax, SciServer, and Datalabs is different 
+than configuring pySAS for your own computer. See 
+:ref:`below for instructions <online>` on configuring pySAS on Fornax, SciServer, 
+and Datalabs.
+
+Before you use pySAS for data analysis you will need to configure pySAS so 
 that it knows where you have SAS installed and where the XMM calibration files 
 are located. After installing pySAS using *pip*, in Python run:
 
@@ -66,37 +99,32 @@ After pySAS has been configured you can import pySAS like normal.
 
     import pysas
 
+:ref:`Return to top <topintro>`
+
+.. _online:
+
 ---------------------------------------------
 Using pySAS on Fornax, SciServer, or Datalabs
 ---------------------------------------------
 
-There are **free to use** online data analysis platforms to analize astronomy 
-data. These platforms are accessed through a browser and use a Jupyter Lab 
-environment as an interface. Currently there are three platforms available where 
-you can use pySAS.
+* On Fornax use the ``sas`` Python environment.
+* On SciServer use the ``xmmsas`` Python environment. 
+* On Datalabs use the ``xmmsas`` image. (**Note** July 8, 2026: The XMM SAS 
+  image on Datalabs is still being updated. pySAS will work, but a number of 
+  pySAS features are not available without some manipulation of the environment.)
 
-* **Fornax**: A collaboration between NASA Goddard Space Flight Center and NASA’s 
-  science archives; HEASARC, IRSA, and MAST. (`Link to get an account on Fornax <https://docs.fornax.sciencecloud.nasa.gov/quick-start/>`_)
-* **SciServer**: Operated by the *Institute for Data-Intensive Engineering and 
-  Science* at Johns Hopkins University. (`Link to SciServer <https://www.sciserver.org/>`_)
-* **Datalabs**: Operated by the European Space Agency (ESA). (`Link to Datalabs <https://datalabs.esa.int/>`_)
+On Fornax, SciServer, and Datalabs the paths to SAS and the calibration files 
+are pre-set and the user does not have to do anything. But you still have to set 
+your default data directory by running the following command in Python:
 
-Both SAS and pySAS come preinstalled on 
-`Fornax <https://docs.fornax.sciencecloud.nasa.gov/quick-start/>`_, 
-`SciServer <https://www.sciserver.org/>`_, and `Datalabs <https://datalabs.esa.int/>`_. 
-On Fornax use the ``sas`` Python environment. On SciServer use the ``xmmsas`` 
-Python environment. (**Note** June 8, 2026: The XMM SAS image on Datalabs is 
-still being updated. pySAS will work, but a number of pySAS features are not 
-available without some manipulation of the environment.)
-
-On Fornax and SciServer the paths to SAS and the calibration files are 
-pre-set and the user does not have to do anything. But you can set your default 
-data directory by running the following:
+**Note** July 8, 2026: `simple_config` currently doesn't work on Datalabs.
 
 .. code-block:: python
 
     from pysas import sas_cfg
     sas_cfg.simple_config()
+
+:ref:`Return to top <topintro>`
 
 Document last updated: |date|
 

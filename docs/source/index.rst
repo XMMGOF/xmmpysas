@@ -16,6 +16,7 @@ pySAS is the Python wrapper for XMM-Newton's `Science Analysis System`_ (SAS).
 
    Introduction <intro.rst>
    Overview of pySAS <overview.rst>
+   Technical Information for Advanced Users <technical.rst>
    The Absolute Beginner's Guide to XMM-Newton <absolutebeginners.rst>
    pySAS Classes and Functions <pysas.rst> 
 
