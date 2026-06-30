@@ -117,7 +117,7 @@ On Fornax, SciServer, and Datalabs the paths to SAS and the calibration files
 are pre-set and the user does not have to do anything. But you still have to set 
 your default data directory by running the following command in Python:
 
-**Note** July 8, 2026: `simple_config` currently doesn't work on Datalabs.
+**Note** July 8, 2026: ``simple_config`` currently doesn't work on Datalabs.
 
 .. code-block:: python
 

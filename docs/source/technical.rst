@@ -383,7 +383,7 @@ the current version of pySAS that is installed using `pip` you will have to
 remove '``{SAS install directory}/lib/python/pysas/``' from your PATH and 
 PYTHONPATH variables.
 
-If you we previously using pySAS v1.4 which comes with SAS, this next section 
+If you were previously using pySAS v1.4 which comes with SAS, this next section 
 gives a quick explanation of the major differences.
 
 * The 'Wrapper' has been deprecated and replaced by :py:class:`~pysas.sastask.MyTask`.
