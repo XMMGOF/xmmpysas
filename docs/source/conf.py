@@ -14,9 +14,9 @@ sys.path.insert(0, os.path.abspath('../../src/pysas/'))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'pySAS'
-copyright = '2026, Ryan Tanner'
+copyright = '2026, XMM Guest Observer Facility'
 author = 'Ryan Tanner'
-release = '2.4.4'
+release = '2.5.2'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
