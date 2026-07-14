@@ -33,6 +33,22 @@ Both SAS and pySAS come preinstalled on
 
 :ref:`Return to top <topintro>`
 
+----------------
+pySAS Tutuorials
+----------------
+
+There are several tutuorials demonstrating how to use pySAS using Jupyter 
+Notebooks. `These notebooks can be found on GitHub <https://github.com/XMMGOF/pysas_docs>`_.
+
+You can clone the repository with the example notebooks by running the 
+following command in a directory of your choosing:
+
+.. code-block::
+
+    git clone https://github.com/XMMGOF/pysas_docs.git
+
+:ref:`Return to top <topintro>`
+
 ------------------------------------------
 How do I install pySAS on my own computer?
 ------------------------------------------
