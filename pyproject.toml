@@ -32,5 +32,4 @@ module-name = "pysas"
 
 [tool.uv_build]
 src-layout = true
-package-data = {"my_package" = ["src/pysas/pysaspkgs", 
-                                "src/pysas/_data/*"]}
+package-data = {"my_package" = ["src/pysas/_data/*"]}
