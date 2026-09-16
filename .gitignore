@@ -3,6 +3,6 @@ dist
 .ipynb_checkpoints
 /docs/build
 *__pycache__
-/src/xga.egg-info/
+*.egg-info/
 *Makefile
 *make.bat
